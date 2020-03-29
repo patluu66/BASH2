@@ -1,0 +1,44 @@
+<div class="houseSearch" *ngIf="isSearchHome">
+  <p>Why rent when you could buy a share? Please enter the address to search below.</p>
+
+  <div class="example-container">
+      <mat-form-field [style.width.px]=400 appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+      <button class="btn btn-primary" (click)="onGetZillow()">Search</button>
+      <button class="btn btn-primary" (click)="onGetGiphy()">Giphy</button>
+  </div>
+</div>
+
+
+<div *ngIf="show">
+  <div *ngFor="let info of homeInfo">
+    {{info}}
+  </div>
+ 
+  <app-post-create></app-post-create>
+
+  <div class="list" *ngFor="let post of posts.reverse()">
+    <div class="comment">
+      {{ post.content }} - <span class="name">{{post.title}}</span>
+    </div>
+    <hr>
+  </div>
+</div>
+
+
+<!-- <mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts.reverse()">
+    <mat-expansion-panel-header>
+      {{ post.title }}
+    </mat-expansion-panel-header>
+    <p>{{ post.content }}</p>
+    <mat-action-row>
+      <button mat-button color="primary">EDIT</button>
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No posts added yet!</p> -->

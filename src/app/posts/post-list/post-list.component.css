@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
+.comment {
+  margin: 0 0 0 20px;  
+}
+
+.name {
+  color: blue;
+}
+
+.list {
+  margin: 15px 0 0 0;
+}
+
+.houseSearch {
+  margin: 0 auto 0 auto; 
+  width: 600px
+}
